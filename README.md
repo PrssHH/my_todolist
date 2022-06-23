@@ -2,7 +2,8 @@
 
 ## 使用方法
 
-目前只有命令行操作。
+项目的编写平台是Linux，可执行文件的运行环境也是Linux，目前只有命令行操作。
+
 获取帮助：
 ```
 $ ./todo -h
@@ -13,11 +14,16 @@ User_Name: HH
 Password: password
 ```
 
+编译时请用：
+```
+$ g++ main.cpp -l sqlite3 todo.cpp todo.h passwd.cpp passwd.h md5.cpp md5.h -o todo
+```
+
 ## 这一堆的由来
 
 小学期华有两门课想上的，一门是自己选的AI001，另一面是开给信安的必修课"NIS1336 计算机编程实践"，然后很不巧这两门的上课时间撞了不能都选，最后选了AI001然后旁听NIS1336。  
 
-这一个项目是第一节课就布置下来的，华瞅了一眼发现有亿点点的小难。然后加上之前也想过暑假写一个不大不小的项目再锻炼一下自己的编码能力，正好写一个todolist是差不多的。于是虽然没选上这课，也写了这么一个项目。  
+这一个项目是第一节课就布置下来的，华瞅了一眼发现有亿点点的小难。然后加上之前也想过暑假写一个不大不小的项目再锻炼一下自己的coding能力，正好写一个todolist是差不多的。于是虽然没选上这课，也写了这么一个项目。  
 
 ## 作业目标
 
@@ -67,7 +73,7 @@ Password: password
 
         程序应具有完整的命令行帮助说明和使用示例。
         命令行参数应支持 run，addtask，showtask，deltask等命令。 其中run方式以shell方式循环运行，等待用户输入命令；
-        比如：
+    比如：
 ```
 $ myschedule  run
 $ myschedule  user1 password   addtask  tasknam1….
@@ -105,3 +111,5 @@ $ myschedule  user1 password   addtask  tasknam1….
 - [ ] 能和前端交互的api
 
 设计文档不知道华日后还有没有心情水一篇blog？或者什么的。
+
+关于ui界面华是想用python的tkiner直接搓一个或者是
